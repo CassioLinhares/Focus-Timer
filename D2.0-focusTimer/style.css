@@ -1,0 +1,187 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  :root {
+    font-size: 62.5%;
+  
+    --ff-timer: 'Roboto', sans-serif;
+  
+    --bg-body: #FFFFFF;
+    --bg-btn-sound: #E1E1E6;
+    --bg-btn-soundSelected: #02799D;
+  
+    --fc-timer: #323238;
+    --fc-btn-soundSelected: #FFFFFF;
+    --fc-icons: #323238;
+    --fc-input: #323238;
+    --fc-input-selected:#fff;
+  }
+
+  .dark{
+    --bg-body: #121214;
+    --bg-btn-sound: #29292E;
+    --bg-btn-soundSelected:  #0A3442;
+  
+    --fc-timer: #fff;
+    --fc-btn-soundSelected: #FFFFFF;
+    --fc-icons: #C4C4CC;
+    --fc-input: #C4C4CC;
+  }
+  
+  body {
+    background-color: var(--bg-body);
+    display: grid;
+    min-height: 100vh;
+  }
+
+  .theme{
+   position: fixed;
+   top: 6rem;
+   right: 6rem;
+  }
+
+  .btn-light,
+  .btn-dark {
+    background-color: transparent;
+    border: none;
+  }
+
+  .hide{
+    display: none;
+  }
+
+  .theme:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+  }
+  
+  main{
+    display: flex;
+    gap: 19.2rem;
+    align-self: center;
+    justify-self: center;
+  }
+  
+  .focusTimer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  #timer{
+    /* width: clamp(12rem, 12rem + 30vw, 32.1rem); */
+    max-width: 32.1rem;
+    display: flex;
+    margin-bottom: 1.7rem;
+  }
+  
+  #timer span {
+    font-family: var(--ff-timer);
+    font-weight: 500;
+    font-size: clamp(6rem, 5rem + 10vw, 12.6rem);
+    line-height: 14.8rem;
+    text-align: center;
+    text-transform: uppercase;
+  
+    color: var(--fc-timer);
+  }
+  
+  #controls {
+    /* width: clamp(10rem, 10rem + 30vw, 31.2rem); */
+    max-width: 31.2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+  }
+  
+  #controls button{
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    padding: 0;
+  }
+  
+  #controls button:hover{
+    transform: scale(1.1);
+  }
+  
+  #sound{
+    width: clamp(10rem, 10rem + 30vw, 30.8rem);    
+  }
+  
+  .colum-1{
+    margin-bottom: 3.2rem;
+  }
+  
+  .colum-1, 
+  .colum-2{
+    display: flex;
+    gap: 3.2rem;
+  }
+
+  .card{
+    border: none;
+    background-color: var(--bg-btn-sound);
+    border-radius: 2.4rem;
+    width: 13.8rem;
+    height: 15.2rem;
+    cursor: pointer;
+  }
+
+  #volume{
+    width: 9rem;
+    height: 0.3rem;
+    margin-top: 3rem;
+    appearance: none;
+    accent-color: var(--fc-input);
+    background-color: var(--fc-input);
+  }
+
+  svg path{
+    fill: var(--fc-icons);
+  }
+  
+  .on{
+    background-color: var(--bg-btn-soundSelected);
+  }
+  
+  .on svg path{
+    fill: var(--fc-btn-soundSelected);
+  }
+
+  .on input#volume{
+    accent-color: var(--fc-input-selected);
+    background-color: var(--fc-input-selected);
+  }
+  
+  @media (max-width: 70rem) {
+   main{
+    flex-direction: column;
+    gap: 5rem;
+    align-items: center;
+   }
+   .icon-theme{
+    top: 2rem;
+    right: 4rem;
+   }
+   #controls{
+    gap: 1rem;
+   }
+   #timer{
+    margin-bottom: 0rem;
+   }
+   #timer span {
+    line-height: 12rem;
+   }
+   input#volume{
+    width: 6rem;
+  }
+  }
+  
+  
