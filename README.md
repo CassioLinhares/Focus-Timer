@@ -22,8 +22,8 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 ![App Screenshot](https://i.imgur.com/mDkI6du.png)
 
 ### Informações
-📅 **07.02.2023**
+📅 **19.01.2023**
 
 🕛 **Status:** Concluído ✔
 
-🌎 **Result Preview: https://git-hub-favorites.vercel.app/.**
+🌎 **Result Preview: https://temporizador-one.vercel.app/.**
